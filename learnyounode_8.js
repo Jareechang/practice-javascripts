@@ -5,16 +5,9 @@ restModule = require('./rest_module.js');
 
 url = process.argv[2];
 
-/* 
-** 
-    Callback function to read the variables upon 
-    finishing the Get request to 'x' url
-**
-*/
-
 returnData = function(data){
     // do something to data set...
-    
+    console.log(data);
 }
 
 restModule.returnResponse( url, returnData);

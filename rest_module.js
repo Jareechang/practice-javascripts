@@ -1,21 +1,12 @@
 'use strict';
 
-// Require the http core module
+// Require the http core modules
 var http = require('http');
 
-
-/* HTTP module  
-*    
-*   Uses Singleton to which is a self executing function 
-*       
+/*  
+*  REST module 
 *         
-*   var request = process.argv[2];
-*        
-*   RestModule.get(request);      // the response is available via a reader method `returnResponse`
-*   
-*   
 */
-
 
 var restModule = (function(){
 
