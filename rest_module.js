@@ -24,11 +24,11 @@ var restModule = (function(){
 
     function _callback(res){    
 
+        attribute.get(res);                                  
+
         res.setEncoding('utf8');
         
         res.on('data', function(data){   
-
-            attribute.get(data);                                  
             
             // console.log(data);  // for logging the data 
         });                
