@@ -20,7 +20,7 @@ var http = require('http');
 
             var pattern =  /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/                                                
             var stringValid = request.match(pattern); 
-            
+
             return stringValid ? true : false;  // Check if string is a valid request 
         }
 
@@ -45,7 +45,7 @@ var http = require('http');
 
             }else {
 
-                console.log("Request invalid, please remember to pass in third argument with proper protocol (http://) \ 
+                console.log("Request invalid, please remember to pass in third argument with proper protocol (http://)\
                              along with proper domain (google.com)");
 
             }
