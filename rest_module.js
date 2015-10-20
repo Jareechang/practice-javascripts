@@ -28,8 +28,7 @@ var restModule = (function(){
 
         res.setEncoding('utf8');
         
-        res.on('data', function(data){   
-            
+        res.on('data', function(data){               
             // console.log(data);  // for logging the data 
         });                
 
@@ -56,6 +55,7 @@ var restModule = (function(){
         sentGetRequest(request);
 
     }
+    
 
     // Return the API Interface to interact with module
     return {
