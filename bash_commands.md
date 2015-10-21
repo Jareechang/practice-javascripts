@@ -1,4 +1,4 @@
-## Linux commands exercises 
+## Bash commands exercises 
 
 Using the `learnyounode_notes_10.txt file, I used linux commands to maunipulate the output from the **learnyounode REPL**
 
