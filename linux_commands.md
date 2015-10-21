@@ -1,8 +1,9 @@
 ## Linux commands exercises 
 
-Using the `test.txt` file, I used linux commands to maunipulate the output from the **learnyounode REPL**. The `learnyounode_notes_10.txt` is used in the example. 
+Using the `learnyounode_notes_10.txt file, I used linux commands to maunipulate the output from the **learnyounode REPL**
 
-** All the commands used are MAC OS specific. so, it may vary on linux ** 
+###### All the commands used are MAC OS specific. so, it may vary on linux 
+
 
 *Commands along with explanation:*
 
