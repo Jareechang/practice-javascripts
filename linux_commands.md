@@ -34,9 +34,9 @@ After some google search. It seems that the jury is that this command is a comma
 So, essentially, the commands ran in inside that wrapper will be replace with its output. In this case, this would be the link to the github account. 
 
 3. `egrep -o "https://.*/strftime]" filename ...`
-..* **Commmand:** egrep  *(same as grep -E)*
-..* **Tag:** -o  *Prints only the matching part of the lines.*
-..* **Regex:** *"https://.*/strftime]"* (quick and dirty regex to find link)
+    * **Commmand:** egrep  *(same as grep -E)*
+    * **Tag:**  *Prints only the matching part of the lines.*
+    * **Regex:** *"https://.*/strftime]"* (quick and dirty regex to find link)
 
 4. `sed 's/.$//'` 
 
