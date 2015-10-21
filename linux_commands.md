@@ -44,9 +44,10 @@ So, essentially, the commands ran in inside that wrapper will be replace with it
 ```
 egrep -o "https://.*/strftime]" filename ...
 ```
-    * **Commmand:** egrep  *(same as grep -E)*
-    * **Tag:**  *Prints only the matching part of the lines.*
-    * **Regex:** *"https://.*/strftime]"* (quick and dirty regex to find link)
+
+* **Commmand:** egrep  *(same as grep -E)*
+* **Tag:**  *Prints only the matching part of the lines.*
+* **Regex:** *"https://.*/strftime]"* (quick and dirty regex to find link)
 
 4. Cutting last character
 
