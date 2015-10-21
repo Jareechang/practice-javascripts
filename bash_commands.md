@@ -57,7 +57,7 @@ egrep -o "https://.*/strftime]" filename ...
 ```
 
 * **Commmand:** egrep  *(same as grep -E)*
-* **Tag:**  *Prints only the matching part of the lines.*
+* **Flag:** -o *Prints only the matching part of the lines.*
 * **Regex:** *"https://.*/strftime]"* (quick and dirty regex to find link)
 
 4. Cutting last character
@@ -78,15 +78,20 @@ This removes last line of the output no matter what it is. In this case, I had a
 
 Using the infamous `gsed` and `sed` commands. I wanted to defined the local variable `strftime` from the command line without the need of opening up a text editor. 
 
+In the case of MAC, you will need to install the `GNU-sed`. This is easily done through `brew install gnu-sed` 
+and the corresponding command is `gsed`. 
 
 ```
  gsed -i "5i var strftime = require('strftime');" learnyounode_10.js
 ```
 
-
+* **Commmand:** gsed (see above, this is the MAC version of GNU-sed)
+* **Flag:** -i *Edits the file in place(see man gsed or sed for more info.)*
+* **script** `5i` within the string indicates that `var strftime = require('strftime');` will be `inserts or appended` into `line 5`
 
 
 #### Output into specific line into JS file
+```
 gsed -i "5i$( sed -n '12,12p' learnyounode_notes_10.txt | cut -c 10-27)" learnyounode_10.js
-
+```
 
