@@ -1,6 +1,6 @@
 ## Bash commands exercises 
 
-Using the `learnyounode_notes_10.txt file, I used linux commands to maunipulate the output from the **learnyounode REPL**
+Using the `learnyounode_notes_10.txt file`, I used linux commands to maunipulate the output from the **learnyounode REPL**
 
 ###### All the commands used are MAC OS specific. so, it may vary on linux 
 
@@ -18,7 +18,7 @@ Typically. If you are following the NodeJS tutorials `learnyounode` series. You 
 
 We will do this through the `tee` commmand. This utility comamnd basically copies standard input to standard output.
 
-``` 
+```bash
 learnyounode | tee name_of_your_file.txt 
 ```
 
@@ -27,7 +27,7 @@ learnyounode | tee name_of_your_file.txt
 Using a combination of grep, egrep and sed, I was able to extract the link provided by the learnyounode and visit the page via google chrome all via command line. 
 
 the exact command that I used was: 
-```
+```bash
 open -a "Google chrome" $(egrep -o "https://.*/strftime]" learnyounode_notes_10.txt | sed 's/.$//')
 ```
 
@@ -35,7 +35,7 @@ open -a "Google chrome" $(egrep -o "https://.*/strftime]" learnyounode_notes_10.
 
 
 1. Opening Google chrome (command line):
-```
+```bash
 open -a "Google chrome" http:// ...
 ```
 
@@ -44,7 +44,7 @@ This commands does exactly as it seems. Opens google chrome to the given link pr
 
 2. Command substitution in bash:
 
-```
+```bash
 $(...)
 ```
 
@@ -52,7 +52,7 @@ After some google search. It seems that the jury is that this command is a comma
 So, essentially, the commands ran in inside that wrapper will be replace with its output. In this case, this would be the link to the github account. 
 
 3. Grepping:
-```
+```bash
 egrep -o "https://.*/strftime]" filename ...
 ```
 
@@ -62,7 +62,7 @@ egrep -o "https://.*/strftime]" filename ...
 
 4. Cutting last character
 
-```
+```bash
 sed 's/.$//'
 ```
 
@@ -81,17 +81,17 @@ Using the infamous `gsed` and `sed` commands. I wanted to defined the local vari
 In the case of MAC, you will need to install the `GNU-sed`. This is easily done through `brew install gnu-sed` 
 and the corresponding command is `gsed`. 
 
-```
+```bash
  gsed -i "5i var strftime = require('strftime');" learnyounode_10.js
 ```
 
 * **Commmand:** gsed (see above, this is the MAC version of GNU-sed)
 * **Flag:** -i *Edits the file in place(see man gsed or sed for more info.)*
-* **script** `5i` within the string indicates that `var strftime = require('strftime');` will be `inserts or appended` into `line 5`
+* **script** `5i` within the string indicates that `var strftime = require('strftime');` will be `inserted or appended` into `line 5`
 
 
 #### Output into specific line into JS file
-```
+```bash
 gsed -i "5i$( sed -n '12,12p' learnyounode_notes_10.txt | cut -c 10-27)" learnyounode_10.js
 ```
 
