@@ -91,6 +91,10 @@ and the corresponding command is `gsed`.
 
 
 #### Output into specific line into JS file
+This command is very similar to the previous command except in this scenario, we are outputting the format that the time needs to be in. ("YYYY-MM-DD hh:mm")
+
+Additionally, we have a command substitution - `sed -n '12,12p' learnyounode_notes_10.txt | cut -c 10-27`. This command will get line 12 within the text file and trim from character 10 to 27. I observed some weird character in the text file so I decided to add this in. 
+
 ```bash
 gsed -i "5i$( sed -n '12,12p' learnyounode_notes_10.txt | cut -c 10-27)" learnyounode_10.js
 ```
