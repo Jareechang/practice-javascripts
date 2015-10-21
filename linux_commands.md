@@ -7,10 +7,20 @@ Using the `learnyounode_notes_10.txt file, I used linux commands to maunipulate 
 
 *Commands along with explanation:*
 
-1. Find strftime github link via `grep, egrep and sed` 
-2. Output into specific line in a JS file via `gsed` 
-3. Get the date formatting  -- "YYYY-MM-DD hh:mm" via `gsed, sed`
+1. Getting Standard output to a txt file
+2. Find strftime github link via `grep, egrep and sed` 
+3. Output into specific line in a JS file via `gsed` 
+4. Get the date formatting  -- "YYYY-MM-DD hh:mm" via `gsed, sed`
 
+#### Getting standard output into txt file
+
+Typically. If you are following the NodeJS tutorials `learnyounode` series. You will know the command `learnyounode`,the REPL will appear in the command line and you will be able to the select the chapter. However, we want to be able to capture that input (learnyounode output) into a txt file (name_of_your_file.txt) that we can manipulate. 
+
+We will do this through the `tee` commmand. This utility comamnd basically copies standard input to standard output.
+
+``` 
+learnyounode | tee name_of_your_file.txt 
+```
 
 #### Grepping links
 
